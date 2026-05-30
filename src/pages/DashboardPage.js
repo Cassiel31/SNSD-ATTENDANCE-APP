@@ -23,7 +23,7 @@ export default function DashboardPage({
     >
       <div
         style={{
-          marginBottom: "42px",
+          marginBottom: "40px",
         }}
       >
         <p
@@ -40,11 +40,10 @@ export default function DashboardPage({
           style={{
             fontFamily:
               "Playfair Display, serif",
-            fontSize: "56px",
+            fontSize: "58px",
             lineHeight: "1",
             margin: 0,
             color: "#1f1f23",
-            wordBreak: "break-word",
           }}
         >
           {currentUser?.full_name}
@@ -63,16 +62,15 @@ export default function DashboardPage({
 
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns:
-            "1fr 1fr",
-          gap: "20px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "22px",
         }}
       >
         <DashboardCard
           icon={
             <CalendarCheck
-              size={64}
+              size={70}
             />
           }
           title="Attendance"
@@ -86,7 +84,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <User
-              size={64}
+              size={70}
             />
           }
           title="Personal Details"
@@ -100,7 +98,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <Crown
-              size={64}
+              size={70}
             />
           }
           title="Hierarchy"
@@ -114,7 +112,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <Building2
-              size={64}
+              size={70}
             />
           }
           title="SNSD Updates"
@@ -140,12 +138,11 @@ function DashboardCard({
       style={{
         width: "100%",
 
-        height: "250px",
+        aspectRatio: "1 / 1",
 
         border: "none",
 
-        borderRadius:
-          "36px",
+        borderRadius: "36px",
 
         backgroundColor:
           "white",
@@ -166,7 +163,7 @@ function DashboardCard({
         alignItems:
           "center",
 
-        gap: "26px",
+        gap: "24px",
 
         padding: "24px",
 
@@ -179,15 +176,11 @@ function DashboardCard({
       <div
         style={{
           display: "flex",
-
-          alignItems:
-            "center",
-
           justifyContent:
             "center",
-
-          color:
-            "#1f1f23",
+          alignItems:
+            "center",
+          color: "#1f1f23",
         }}
       >
         {icon}
@@ -195,7 +188,7 @@ function DashboardCard({
 
       <div
         style={{
-          fontSize: "28px",
+          fontSize: "30px",
 
           fontWeight:
             "600",
@@ -208,6 +201,8 @@ function DashboardCard({
 
           textAlign:
             "center",
+
+          maxWidth: "85%",
         }}
       >
         {title}
