@@ -23,7 +23,7 @@ export default function DashboardPage({
     >
       <div
         style={{
-          maxWidth: "420px",
+          maxWidth: "700px",
           margin: "0 auto",
         }}
       >
