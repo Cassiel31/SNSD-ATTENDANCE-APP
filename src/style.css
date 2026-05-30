@@ -3,3 +3,18 @@
 body {
   margin: 0;
 }
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
