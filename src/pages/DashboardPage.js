@@ -17,19 +17,19 @@ export default function DashboardPage({
         minHeight: "100vh",
         backgroundColor: "#f6f2ee",
         fontFamily: "Inter, sans-serif",
-        padding: "24px",
+        padding: "28px",
         boxSizing: "border-box",
       }}
     >
       <div
         style={{
-          marginBottom: "36px",
+          marginBottom: "42px",
         }}
       >
         <p
           style={{
             color: "#8b8b8b",
-            marginBottom: "8px",
+            marginBottom: "10px",
             fontSize: "16px",
           }}
         >
@@ -40,7 +40,7 @@ export default function DashboardPage({
           style={{
             fontFamily:
               "Playfair Display, serif",
-            fontSize: "52px",
+            fontSize: "56px",
             lineHeight: "1",
             margin: 0,
             color: "#1f1f23",
@@ -54,7 +54,7 @@ export default function DashboardPage({
           style={{
             marginTop: "12px",
             color: "#777",
-            fontSize: "16px",
+            fontSize: "18px",
           }}
         >
           @{currentUser?.username}
@@ -63,16 +63,16 @@ export default function DashboardPage({
 
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "18px",
-          width: "100%",
+          display: "grid",
+          gridTemplateColumns:
+            "1fr 1fr",
+          gap: "20px",
         }}
       >
         <DashboardCard
           icon={
             <CalendarCheck
-              size={42}
+              size={64}
             />
           }
           title="Attendance"
@@ -86,7 +86,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <User
-              size={42}
+              size={64}
             />
           }
           title="Personal Details"
@@ -100,7 +100,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <Crown
-              size={42}
+              size={64}
             />
           }
           title="Hierarchy"
@@ -114,7 +114,7 @@ export default function DashboardPage({
         <DashboardCard
           icon={
             <Building2
-              size={42}
+              size={64}
             />
           }
           title="SNSD Updates"
@@ -140,12 +140,12 @@ function DashboardCard({
       style={{
         width: "100%",
 
-        height: "140px",
+        height: "250px",
 
         border: "none",
 
         borderRadius:
-          "30px",
+          "36px",
 
         backgroundColor:
           "white",
@@ -157,29 +157,33 @@ function DashboardCard({
 
         display: "flex",
 
+        flexDirection:
+          "column",
+
+        justifyContent:
+          "center",
+
         alignItems:
           "center",
 
-        gap: "22px",
+        gap: "26px",
 
         padding: "24px",
 
         boxSizing:
           "border-box",
 
-        textAlign: "left",
+        textAlign: "center",
       }}
     >
       <div
         style={{
-          width: "60px",
-
           display: "flex",
 
-          justifyContent:
+          alignItems:
             "center",
 
-          alignItems:
+          justifyContent:
             "center",
 
           color:
@@ -191,7 +195,7 @@ function DashboardCard({
 
       <div
         style={{
-          fontSize: "24px",
+          fontSize: "28px",
 
           fontWeight:
             "600",
@@ -199,8 +203,11 @@ function DashboardCard({
           color:
             "#1f1f23",
 
-          fontFamily:
-            "Playfair Display, serif",
+          lineHeight:
+            "1.2",
+
+          textAlign:
+            "center",
         }}
       >
         {title}
