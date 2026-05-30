@@ -17,26 +17,26 @@ export default function DashboardPage({
         minHeight: "100vh",
         backgroundColor: "#f6f2ee",
         fontFamily: "Inter, sans-serif",
-        padding: "20px",
+        padding: "24px",
         boxSizing: "border-box",
+        width: "100%",
       }}
     >
       <div
         style={{
-          maxWidth: "700px",
-          margin: "0 auto",
+          width: "100%",
         }}
       >
         <div
           style={{
-            marginBottom: "28px",
+            marginBottom: "36px",
           }}
         >
           <p
             style={{
               color: "#8b8b8b",
-              marginBottom: "8px",
-              fontSize: "14px",
+              marginBottom: "10px",
+              fontSize: "18px",
             }}
           >
             Hello,
@@ -46,10 +46,11 @@ export default function DashboardPage({
             style={{
               fontFamily:
                 "Playfair Display, serif",
-              fontSize: "40px",
+              fontSize: "56px",
               lineHeight: "1",
               margin: 0,
               color: "#1f1f23",
+              wordBreak: "break-word",
             }}
           >
             {currentUser?.full_name}
@@ -57,9 +58,9 @@ export default function DashboardPage({
 
           <p
             style={{
-              marginTop: "10px",
+              marginTop: "12px",
               color: "#777",
-              fontSize: "15px",
+              fontSize: "18px",
             }}
           >
             @{currentUser?.username}
@@ -71,11 +72,12 @@ export default function DashboardPage({
             display: "grid",
             gridTemplateColumns:
               "1fr 1fr",
-            gap: "16px",
+            gap: "20px",
+            width: "100%",
           }}
         >
           <DashboardCard
-            icon={<CalendarCheck size={42} />}
+            icon={<CalendarCheck size={52} />}
             title="Attendance"
             onClick={() =>
               setCurrentPage(
@@ -85,7 +87,7 @@ export default function DashboardPage({
           />
 
           <DashboardCard
-            icon={<User size={42} />}
+            icon={<User size={52} />}
             title="Personal Details"
             onClick={() =>
               setCurrentPage(
@@ -95,7 +97,7 @@ export default function DashboardPage({
           />
 
           <DashboardCard
-            icon={<Crown size={42} />}
+            icon={<Crown size={52} />}
             title="Hierarchy"
             onClick={() =>
               setCurrentPage(
@@ -105,7 +107,7 @@ export default function DashboardPage({
           />
 
           <DashboardCard
-            icon={<Building2 size={42} />}
+            icon={<Building2 size={52} />}
             title="SNSD Updates"
             onClick={() =>
               setCurrentPage(
@@ -129,28 +131,30 @@ function DashboardCard({
       onClick={onClick}
       style={{
         border: "none",
-        borderRadius: "30px",
+        borderRadius: "32px",
         backgroundColor: "white",
         boxShadow:
           "0 10px 30px rgba(0,0,0,0.05)",
         cursor: "pointer",
 
-        height: "180px",
+        height: "220px",
 
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
 
-        padding: "18px",
+        padding: "20px",
 
         boxSizing:
           "border-box",
+
+        width: "100%",
       }}
     >
       <div
         style={{
-          height: "50px",
+          height: "60px",
 
           display: "flex",
 
@@ -160,7 +164,7 @@ function DashboardCard({
           justifyContent:
             "center",
 
-          marginBottom: "18px",
+          marginBottom: "20px",
         }}
       >
         {icon}
@@ -168,7 +172,7 @@ function DashboardCard({
 
       <div
         style={{
-          fontSize: "18px",
+          fontSize: "22px",
 
           fontWeight: "600",
 
@@ -179,7 +183,7 @@ function DashboardCard({
 
           lineHeight: "1.25",
 
-          minHeight: "46px",
+          minHeight: "60px",
 
           display: "flex",
 
